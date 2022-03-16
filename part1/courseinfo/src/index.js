@@ -1,17 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Header from './Header.js'
+import Content from './Content.js'
+import Total from './Total.js'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const App = () => {
+  const course = 'Half Stack application development'
+  const parts = ['Fundamentals of React', 'Using props to pass data','State of a component']
+  const exercises = [10,7,14]
+
+  return (
+    <div>
+      <Header course={course} />
+      <Content parts={parts} exercises={exercises} />
+      <Total exercises={exercises}/>
+    </div>
+  )
+}
+
+ReactDOM.render(<App />, document.getElementById('root'))

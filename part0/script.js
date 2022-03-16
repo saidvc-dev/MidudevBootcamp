@@ -1,22 +1,27 @@
 //variables and types
-let name = "Miguel"
+let name = 'Miguel'
 const number = 4
-var isDeveloper = true
+var isDeveloper = true // ver is not recommended
 const list = []
+const anotherList = list.concat(09)
+
 const person = {
-    name: "Miguel",
-    twitter: "miguel12",
-    age: 28,
-    isDeveloper: true,
-    links: ["http://miguel.com"]
+  name: 'Miguel',
+  twitter: '@miguel',
+  age: 28,
+  isDeveloper: true,
+  links: ['http://miguel.com', 'http://twitter/miguel.com'],
 }
 
-//Expresion function
-const addition = (a, b) => {
-    return a + b
+//function expression
+const add = (a, b) => {
+  return a + b
 }
 
-//Declaration function
+let result = add(4, 8)
+console.log(result)
+
+//function declaration
 function substract(a, b) {
-    return a - b;
+  return a - b
 }
